@@ -1,4 +1,4 @@
-﻿#include<iostream>
+#include<iostream>
 #include<string>
 using namespace std;
 class SanPham {
@@ -229,8 +229,8 @@ int main() {
 			    cin >> add;
 					} while ( add + n > 30);
 					SP.setaddDSSP(sp, n , add);
-			}
-			cout << " Them san pham thanh cong!\n";
+                    cout << " Them san pham thanh cong!\n";
+            }
 			break;
 		case 7:
 			cout << " Cam on ban da su dung CT! ";

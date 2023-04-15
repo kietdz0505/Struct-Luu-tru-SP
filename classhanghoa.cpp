@@ -51,7 +51,7 @@ public:
 			cout << "\n";
 		}
 	}
-	void setaddDSSP(SanPham*& dssp, int n , int &t)
+	void setaddDSSP(SanPham*& dssp, int &n , int &t)
 	{
 		n = n + t;
 		for (int i = n-t; i < n; i++) {
@@ -61,14 +61,14 @@ public:
 			cout << "\n";
 		}
 	}
-	void getDSSP(SanPham* dssp, int n) {
+	void getDSSP(SanPham* dssp, int &n) {
 		for (int i = 0; i < n; i++) {
 			cout << " Thong tin san pham thu " << i + 1 << ":\n";
 			getSanpham(*(dssp + i));
 			cout << "\n";
 		}
 	}
-	void sortTonkho(SanPham*& dssp, int n)
+	void sortTonkho(SanPham*& dssp, int &n)
 	{
 		for (int i = 0; i < n - 1; i++)
 		{
@@ -126,7 +126,7 @@ int main() {
 			break;
 		case 2:
 			if (count == 0) cout << " Ban chua nhap du lieu!\n";
-			else SP.getDSSP(sp, n + add);
+			else SP.getDSSP(sp, n);
 			break;
 		case 3:
 			if (count == 0) cout << "Ban chua nhap du lieu!\n";
@@ -134,7 +134,7 @@ int main() {
 			{
 				do {
 					system("cls");
-					SP.getDSSP(sp, n + add);
+					SP.getDSSP(sp, n);
 					cout << "Nhap thu tu san pham ban muon sua thong tin: ";
 					cin >> stt;
 					do {
@@ -212,13 +212,13 @@ int main() {
 					cout << " Thong tin san pham da duoc xoa!\n";
 					cout << " So san pham con lai: " << n << " san pham\n";
 					cout << "\n";
-					SP.getDSSP(sp, n+add);
+					SP.getDSSP(sp, n);
 				}
 			}
 			break;
 		case 5:
 			if (count == 0) cout << "Ban chua nhap du lieu!\n";
-			else SP.sortTonkho(sp, n + add);
+			else SP.sortTonkho(sp, n);
 			break;
 		case 6:	
 			if (count == 0) cout << " Ban chua nhap du lieu!\n";
